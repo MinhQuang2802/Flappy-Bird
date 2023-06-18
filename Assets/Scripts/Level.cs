@@ -132,11 +132,11 @@ public class Level : MonoBehaviour
             }
         }
     }
-        private void SpawnInitialGround()
+    private void SpawnInitialGround()
     {
         groundList = new List<Transform>();
         Transform groundTransform;
-        float groundY = -47f;
+        float groundY = -47.5f; 
         float groundWidth = 192f;
         groundTransform = Instantiate(GameAssets.GetInstance().pfGround, new Vector3(0, groundY, 0), Quaternion.identity);
         groundList.Add(groundTransform);
@@ -164,7 +164,7 @@ public class Level : MonoBehaviour
                     }
                 }
                 // Place Ground on the right most position
-                float groundWidth = -192f ;
+                float groundWidth = 192f;
                 groundTransform.position = new Vector3(rightMostXPosition + groundWidth, groundTransform.position.y, groundTransform.position.z);
             }
         }
